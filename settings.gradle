@@ -1,1 +1,2 @@
-rootProject.name = 'salaryKeeper'
+rootProject.name = 'salary-keeper'
+include('app')

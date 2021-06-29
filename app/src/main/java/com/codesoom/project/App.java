@@ -1,13 +1,13 @@
-package com.codesoom.salaryKeeper;
+package com.codesoom.project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SalaryKeeperApplication {
+public class App {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SalaryKeeperApplication.class, args);
+		SpringApplication.run(App.class, args);
 	}
 
 }
