@@ -1,5 +1,6 @@
 package com.codesoom.project.web.controller;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
@@ -19,6 +20,7 @@ class HelloControllerTest {
     private MockMvc mockMvc;
 
     @Test
+    @DisplayName("App say hello 테스트")
     void sayHello() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
