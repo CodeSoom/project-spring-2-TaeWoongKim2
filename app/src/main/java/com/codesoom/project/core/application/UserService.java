@@ -3,6 +3,7 @@ package com.codesoom.project.core.application;
 import com.codesoom.project.core.domain.User;
 import com.codesoom.project.core.domain.UserRepository;
 import com.codesoom.project.web.dto.UserRegistrationData;
+import com.github.dozermapper.core.Mapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -13,9 +14,11 @@ import javax.transaction.Transactional;
 @Service
 @Transactional
 public class UserService {
+    private final Mapper mapper;
     private final UserRepository userRepository;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(Mapper mapper, UserRepository userRepository) {
+        this.mapper = mapper;
         this.userRepository = userRepository;
     }
 
