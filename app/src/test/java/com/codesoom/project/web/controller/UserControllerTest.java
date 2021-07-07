@@ -40,7 +40,7 @@ class UserControllerTest {
 
     @BeforeEach
     void setUp() {
-        given(userService.registerUser(any(UserRegistrationData.class)))
+        given(userService.createUser(any(UserRegistrationData.class)))
                 .will(invocation -> {
                     UserRegistrationData registrationData =
                             invocation.getArgument(0);

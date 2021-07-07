@@ -1,5 +1,6 @@
 package com.codesoom.project.web.controller;
 
+import com.codesoom.project.core.domain.User;
 import com.codesoom.project.web.dto.UserRegistrationData;
 import com.codesoom.project.web.dto.UserResultData;
 import org.springframework.http.HttpStatus;

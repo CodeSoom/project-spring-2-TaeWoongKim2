@@ -1,6 +1,8 @@
 spring:
   datasource:
     url: jdbc:h2:~/data/salary-keeper
+    username: sa
   jpa:
+    show-sql: true
     hibernate:
       ddl-auto: update
