@@ -1,4 +1,4 @@
-package com.codesoom.assignment;
+package com.codesoom.project.helper;
 
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.MockMvcBuilderCustomizer;
