@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Getter
@@ -19,6 +20,7 @@ public class User {
     @GeneratedValue
     private Long id;
 
+    @NotNull
     @Builder.Default
     private String email = "";
 
