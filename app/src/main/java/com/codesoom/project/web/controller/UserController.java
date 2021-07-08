@@ -4,7 +4,6 @@ import com.codesoom.project.core.domain.User;
 import com.codesoom.project.web.dto.UserRegistrationData;
 import com.codesoom.project.web.dto.UserResultData;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
