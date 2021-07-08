@@ -25,7 +25,7 @@ public class UserService {
     /**
      * 사용자를 등록한다.
      *
-     * @param registrationData 등록하기 위한 데이터
+     * @param registrationData 사용자를 등록하기 위한 데이터
      * @return 등록된 사용자
      */
     public User createUser(UserRegistrationData registrationData) {
