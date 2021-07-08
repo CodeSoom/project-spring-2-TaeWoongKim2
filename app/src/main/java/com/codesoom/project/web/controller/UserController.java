@@ -1,5 +1,6 @@
 package com.codesoom.project.web.controller;
 
+import com.codesoom.project.core.application.UserService;
 import com.codesoom.project.core.domain.User;
 import com.codesoom.project.web.dto.UserRegistrationData;
 import com.codesoom.project.web.dto.UserResultData;
@@ -18,9 +19,10 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/users")
 public class UserController {
+    private final UserService userService;
 
-    public UserController() {
-
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
     /**
@@ -32,10 +34,8 @@ public class UserController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     UserResultData create(@RequestBody @Valid UserRegistrationData registrationData) {
-        return UserResultData.builder()
-                .email(registrationData.getEmail())
-                .name(registrationData.getName())
-                .build();
+        User user = userService.createUser(registrationData);
+        return getUserResultData(user);
     }
 
     private UserResultData getUserResultData(User user) {
