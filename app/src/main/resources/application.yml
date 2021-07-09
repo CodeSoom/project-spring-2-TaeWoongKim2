@@ -9,7 +9,6 @@ spring:
     hibernate:
       format_sql: true
       ddl-auto: create
-
 logging:
   level:
     org.hibernate.SQL: INFO
