@@ -2,7 +2,7 @@ package com.codesoom.project.core.application;
 
 import com.codesoom.project.core.domain.Account;
 import com.codesoom.project.core.domain.AccountRepository;
-import com.codesoom.project.web.dto.AccountRegistrationData;
+import com.codesoom.project.web.dto.AccountCreationData;
 import com.github.dozermapper.core.DozerBeanMapperBuilder;
 import com.github.dozermapper.core.Mapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -42,7 +42,7 @@ class AccountServiceTest {
     @Test
     @DisplayName("신규 계좌 생성 테스트")
     void createAccount() {
-        AccountRegistrationData registrationData = AccountRegistrationData.builder()
+        AccountCreationData registrationData = AccountCreationData.builder()
                 .name(ACCOUNT_NAME)
                 .build();
 
