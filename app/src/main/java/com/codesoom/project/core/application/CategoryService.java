@@ -15,22 +15,22 @@ import javax.transaction.Transactional;
 @Transactional
 public class CategoryService {
     private final Mapper mapper;
-    private final CategoryRepository CategoryRepository;
+    private final CategoryRepository categoryRepository;
 
     public CategoryService(Mapper mapper, CategoryRepository categoryRepository) {
         this.mapper = mapper;
-        this.CategoryRepository = categoryRepository;
+        this.categoryRepository = categoryRepository;
     }
 
     /**
-     * 신규 계좌를 생성한다.
+     * 신규 카테고리를 생성한다.
      *
-     * @param categoryRegistrationData 계좌를 생성 위한 데이터
-     * @return 등록된 계좌
+     * @param registrationData 카테고리를 생성 위한 데이터
+     * @return 등록된 카테고리
      */
-    public Category createCategory(CategoryRegistrationData categoryRegistrationData) {
-        Category category = CategoryRepository.save(
-                mapper.map(categoryRegistrationData, Category.class));
+    public Category createCategory(CategoryRegistrationData registrationData) {
+        Category category = categoryRepository.save(
+                mapper.map(registrationData, Category.class));
 
         return category;
     }

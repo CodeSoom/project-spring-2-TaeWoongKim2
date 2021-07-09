@@ -2,15 +2,12 @@ package com.codesoom.project.core.application;
 
 import com.codesoom.project.core.domain.Category;
 import com.codesoom.project.core.domain.CategoryRepository;
-import com.codesoom.project.helper.UTF8EncodingFilter;
 import com.codesoom.project.web.dto.CategoryRegistrationData;
 import com.github.dozermapper.core.DozerBeanMapperBuilder;
 import com.github.dozermapper.core.Mapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -18,9 +15,6 @@ import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-@WebMvcTest(CategoryService.class)
-@AutoConfigureRestDocs
-@UTF8EncodingFilter
 @DisplayName("CategoryService 테스트")
 class CategoryServiceTest {
     private static final Long CATEGORY_ID = 1L;
@@ -54,7 +48,7 @@ class CategoryServiceTest {
 
         Category category = categoryService.createCategory(registrationData);
 
-        verify(categoryService).createCategory(any(CategoryRegistrationData.class));
+        verify(categoryRepository).save(any(Category.class));
 
         assertThat(category.getId()).isEqualTo(CATEGORY_ID);
         assertThat(category.getName()).isEqualTo(CATEGORY_NAME);
