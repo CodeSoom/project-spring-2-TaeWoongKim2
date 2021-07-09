@@ -10,7 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * 장부 카테고리 도메인
+ * 계좌내역 카테고리 도메인
  */
 @Entity
 @Getter
