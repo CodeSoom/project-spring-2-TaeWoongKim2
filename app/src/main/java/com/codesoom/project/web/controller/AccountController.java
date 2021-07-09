@@ -1,8 +1,17 @@
 package com.codesoom.project.web.controller;
 
 import com.codesoom.project.core.application.AccountService;
+import com.codesoom.project.core.domain.Account;
+import com.codesoom.project.web.dto.AccountCreationData;
+import com.codesoom.project.web.dto.AccountResultData;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 /**
  * 계좌에 관련 요청을 처리하고 그에 따른 응답을 담당합니다.
@@ -14,5 +23,29 @@ public class AccountController {
 
     public AccountController(AccountService accountService) {
         this.accountService = accountService;
+    }
+
+    /**
+     * 신규 계좌을 등록하고, 등록한 계좌을 반환합니다.
+     *
+     * @param creationData 신규 계좌 정보
+     * @return 등록한 계좌
+     */
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    AccountResultData create(@RequestBody @Valid AccountCreationData creationData) {
+        Account account = accountService.createAccount(creationData);
+        return getAccountResultData(account);
+    }
+
+    private AccountResultData getAccountResultData(Account account) {
+        if (account == null) {
+            return null;
+        }
+
+        return AccountResultData.builder()
+                .id(account.getId())
+                .name(account.getName())
+                .build();
     }
 }
