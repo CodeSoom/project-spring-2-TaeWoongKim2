@@ -9,5 +9,5 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface JpaAccountRepository
         extends AccountRepository, CrudRepository<Account, Long> {
-    Account save(Account user);
+    Account save(Account account);
 }
