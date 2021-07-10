@@ -41,7 +41,7 @@ class AccountServiceTest {
 
     @Test
     @DisplayName("신규 계좌 생성 테스트")
-    void createAccount() {
+    void addAccountBookItem() {
         AccountCreationData registrationData = AccountCreationData.builder()
                 .name(ACCOUNT_NAME)
                 .build();
