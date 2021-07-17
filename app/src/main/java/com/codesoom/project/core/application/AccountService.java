@@ -7,6 +7,7 @@ import com.github.dozermapper.core.Mapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Optional;
 
 /**
  * 계좌에 관한 유즈케이스를 담당합니다.
@@ -20,6 +21,15 @@ public class AccountService {
     public AccountService(Mapper mapper, AccountRepository accountRepository) {
         this.mapper = mapper;
         this.accountRepository = accountRepository;
+    }
+
+    /**
+     * ID에 해당하는 계좌를 찾습니다.
+     * @param id 계좌 식별자
+     * @return 계좌
+     */
+    public Account findAccount(Long id) {
+        return null;
     }
 
     /**

@@ -5,6 +5,8 @@ import com.codesoom.project.core.domain.Account;
 import com.codesoom.project.web.dto.AccountCreationData;
 import com.codesoom.project.web.dto.AccountResultData;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +25,17 @@ public class AccountController {
 
     public AccountController(AccountService accountService) {
         this.accountService = accountService;
+    }
+
+
+    /**
+     * 식별자에 해당하는 계좌을 반환합니다.
+     * @param id 계좌 식별자
+     * @return 계좌
+     */
+    @GetMapping("{id}")
+    public AccountResultData account(@PathVariable Long id) {
+        return null;
     }
 
     /**
