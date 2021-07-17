@@ -1,3 +1,10 @@
+## Mac OS x
+.DS_*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 # Ignore Gradle project-specific cache directory
 .gradle
 
@@ -6,3 +13,16 @@ build
 
 # IDE
 .idea
+
+## VS Code
+.vscode
+
+## Node.js
+node_modules
+
+# testing
+coverage
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
