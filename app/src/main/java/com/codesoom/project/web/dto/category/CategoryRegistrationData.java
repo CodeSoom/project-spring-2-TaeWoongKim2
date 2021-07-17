@@ -1,4 +1,4 @@
-package com.codesoom.project.web.dto;
+package com.codesoom.project.web.dto.category;
 
 import com.github.dozermapper.core.Mapping;
 import lombok.AllArgsConstructor;

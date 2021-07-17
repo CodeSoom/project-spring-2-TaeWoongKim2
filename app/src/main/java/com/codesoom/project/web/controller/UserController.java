@@ -2,8 +2,8 @@ package com.codesoom.project.web.controller;
 
 import com.codesoom.project.core.application.UserService;
 import com.codesoom.project.core.domain.User;
-import com.codesoom.project.web.dto.UserRegistrationData;
-import com.codesoom.project.web.dto.UserResultData;
+import com.codesoom.project.web.dto.user.UserRegistrationData;
+import com.codesoom.project.web.dto.user.UserResultData;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

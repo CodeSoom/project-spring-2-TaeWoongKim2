@@ -2,8 +2,8 @@ package com.codesoom.project.web.controller;
 
 import com.codesoom.project.core.application.AccountService;
 import com.codesoom.project.core.domain.Account;
-import com.codesoom.project.web.dto.AccountCreationData;
-import com.codesoom.project.web.dto.AccountResultData;
+import com.codesoom.project.web.dto.account.AccountCreationData;
+import com.codesoom.project.web.dto.account.AccountResultData;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

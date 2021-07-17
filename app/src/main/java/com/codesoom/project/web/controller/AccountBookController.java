@@ -1,13 +1,9 @@
 package com.codesoom.project.web.controller;
 
 import com.codesoom.project.core.application.AccountBookService;
-import com.codesoom.project.core.application.AccountService;
-import com.codesoom.project.core.domain.Account;
 import com.codesoom.project.core.domain.AccountBook;
-import com.codesoom.project.web.dto.AccountBookItemRegistrationData;
-import com.codesoom.project.web.dto.AccountBookResultData;
-import com.codesoom.project.web.dto.AccountCreationData;
-import com.codesoom.project.web.dto.AccountResultData;
+import com.codesoom.project.web.dto.account.AccountBookItemRegistrationData;
+import com.codesoom.project.web.dto.account.AccountBookResultData;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

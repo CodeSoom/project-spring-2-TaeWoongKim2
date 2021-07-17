@@ -1,4 +1,4 @@
-package com.codesoom.project.web.dto;
+package com.codesoom.project.web.dto.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -2,7 +2,7 @@ package com.codesoom.project.core.application;
 
 import com.codesoom.project.core.domain.User;
 import com.codesoom.project.core.domain.UserRepository;
-import com.codesoom.project.web.dto.UserRegistrationData;
+import com.codesoom.project.web.dto.user.UserRegistrationData;
 import com.github.dozermapper.core.Mapper;
 import org.springframework.stereotype.Service;
 

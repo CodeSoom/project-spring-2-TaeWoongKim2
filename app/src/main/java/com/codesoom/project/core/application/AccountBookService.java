@@ -2,7 +2,7 @@ package com.codesoom.project.core.application;
 
 import com.codesoom.project.core.domain.AccountBook;
 import com.codesoom.project.core.domain.AccountBookRepository;
-import com.codesoom.project.web.dto.AccountBookItemRegistrationData;
+import com.codesoom.project.web.dto.account.AccountBookItemRegistrationData;
 import com.github.dozermapper.core.Mapper;
 import org.springframework.stereotype.Service;
 
