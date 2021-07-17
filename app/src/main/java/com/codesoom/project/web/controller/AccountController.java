@@ -27,7 +27,6 @@ public class AccountController {
         this.accountService = accountService;
     }
 
-
     /**
      * 식별자에 해당하는 계좌을 반환합니다.
      * @param id 계좌 식별자
@@ -35,7 +34,8 @@ public class AccountController {
      */
     @GetMapping("{id}")
     public AccountResultData account(@PathVariable Long id) {
-        return null;
+        Account account = accountService.getAccount(id);
+        return getAccountResultData(account);
     }
 
     /**
