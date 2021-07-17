@@ -3,7 +3,7 @@ package com.codesoom.project.web.controller;
 import com.codesoom.project.core.application.AccountService;
 import com.codesoom.project.core.domain.Account;
 import com.codesoom.project.helper.UTF8EncodingFilter;
-import com.codesoom.project.web.dto.AccountCreationData;
+import com.codesoom.project.web.dto.account.AccountCreationData;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

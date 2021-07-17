@@ -3,7 +3,7 @@ package com.codesoom.project.web.controller;
 import com.codesoom.project.core.application.UserService;
 import com.codesoom.project.core.domain.User;
 import com.codesoom.project.helper.UTF8EncodingFilter;
-import com.codesoom.project.web.dto.UserRegistrationData;
+import com.codesoom.project.web.dto.user.UserRegistrationData;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

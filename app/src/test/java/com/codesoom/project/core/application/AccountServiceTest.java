@@ -2,7 +2,7 @@ package com.codesoom.project.core.application;
 
 import com.codesoom.project.core.domain.Account;
 import com.codesoom.project.core.domain.AccountRepository;
-import com.codesoom.project.web.dto.AccountCreationData;
+import com.codesoom.project.web.dto.account.AccountCreationData;
 import com.github.dozermapper.core.DozerBeanMapperBuilder;
 import com.github.dozermapper.core.Mapper;
 import org.junit.jupiter.api.BeforeEach;

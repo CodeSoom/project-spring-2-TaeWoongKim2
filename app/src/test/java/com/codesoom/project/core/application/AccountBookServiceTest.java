@@ -1,11 +1,8 @@
 package com.codesoom.project.core.application;
 
-import com.codesoom.project.core.domain.Account;
 import com.codesoom.project.core.domain.AccountBook;
 import com.codesoom.project.core.domain.AccountBookRepository;
-import com.codesoom.project.core.domain.AccountRepository;
-import com.codesoom.project.web.dto.AccountBookItemRegistrationData;
-import com.codesoom.project.web.dto.AccountCreationData;
+import com.codesoom.project.web.dto.account.AccountBookItemRegistrationData;
 import com.github.dozermapper.core.DozerBeanMapperBuilder;
 import com.github.dozermapper.core.Mapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +10,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;

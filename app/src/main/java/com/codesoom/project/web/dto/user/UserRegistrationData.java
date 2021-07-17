@@ -1,18 +1,20 @@
-package com.codesoom.project.web.dto;
+package com.codesoom.project.web.dto.user;
 
 import com.github.dozermapper.core.Mapping;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 
 @Getter
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class AccountCreationData {
+public class UserRegistrationData {
+    @NotBlank
+    @Mapping("email")
+    private String email;
+
     @NotBlank
     @Mapping("name")
     private String name;

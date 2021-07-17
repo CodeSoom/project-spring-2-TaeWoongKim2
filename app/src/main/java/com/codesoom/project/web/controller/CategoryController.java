@@ -2,8 +2,8 @@ package com.codesoom.project.web.controller;
 
 import com.codesoom.project.core.application.CategoryService;
 import com.codesoom.project.core.domain.Category;
-import com.codesoom.project.web.dto.CategoryRegistrationData;
-import com.codesoom.project.web.dto.CategoryResultData;
+import com.codesoom.project.web.dto.category.CategoryRegistrationData;
+import com.codesoom.project.web.dto.category.CategoryResultData;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
