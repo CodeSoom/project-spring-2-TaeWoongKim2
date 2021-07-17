@@ -4,11 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.context.expression.CachedExpressionEvaluator;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  * 계좌내역 도메인
@@ -28,4 +31,8 @@ public class AccountLedger {
 
     @Builder.Default
     private String description = "";
+
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    private Account account;
 }
