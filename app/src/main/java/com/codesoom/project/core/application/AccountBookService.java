@@ -1,8 +1,8 @@
 package com.codesoom.project.core.application;
 
-import com.codesoom.project.core.domain.AccountBook;
-import com.codesoom.project.core.domain.AccountBookRepository;
-import com.codesoom.project.web.dto.account.AccountBookItemRegistrationData;
+import com.codesoom.project.core.domain.AccountLedger;
+import com.codesoom.project.core.domain.AccountLedgerRepository;
+import com.codesoom.project.web.dto.account.AccountLedgerItemRegistrationData;
 import com.github.dozermapper.core.Mapper;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +15,11 @@ import javax.transaction.Transactional;
 @Transactional
 public class AccountBookService {
     private final Mapper mapper;
-    private final AccountBookRepository accountBookRepository;
+    private final AccountLedgerRepository accountLedgerRepository;
 
-    public AccountBookService(Mapper mapper, AccountBookRepository accountBookRepository) {
+    public AccountBookService(Mapper mapper, AccountLedgerRepository accountLedgerRepository) {
         this.mapper = mapper;
-        this.accountBookRepository = accountBookRepository;
+        this.accountLedgerRepository = accountLedgerRepository;
     }
 
     /**
@@ -28,10 +28,10 @@ public class AccountBookService {
      * @param registrationData 계좌내역를 생성 위한 데이터
      * @return 등록된 계좌내역
      */
-    public AccountBook addAccountBookItem(AccountBookItemRegistrationData registrationData) {
-        AccountBook accountBookItem = accountBookRepository.save(
-            mapper.map(registrationData, AccountBook.class));
+    public AccountLedger addAccountBookItem(AccountLedgerItemRegistrationData registrationData) {
+        AccountLedger accountLedgerItem = accountLedgerRepository.save(
+            mapper.map(registrationData, AccountLedger.class));
 
-        return accountBookItem;
+        return accountLedgerItem;
     }
 }

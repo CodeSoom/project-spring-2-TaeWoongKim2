@@ -18,7 +18,7 @@ import javax.persistence.Id;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountBook {
+public class AccountLedger {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -1,9 +1,9 @@
 package com.codesoom.project.web.controller;
 
 import com.codesoom.project.core.application.AccountBookService;
-import com.codesoom.project.core.domain.AccountBook;
-import com.codesoom.project.web.dto.account.AccountBookItemRegistrationData;
-import com.codesoom.project.web.dto.account.AccountBookResultData;
+import com.codesoom.project.core.domain.AccountLedger;
+import com.codesoom.project.web.dto.account.AccountLedgerItemRegistrationData;
+import com.codesoom.project.web.dto.account.AccountLedgerResultData;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,10 +18,10 @@ import javax.validation.Valid;
  */
 @RestController
 @RequestMapping("/accountBooks")
-public class AccountBookController {
+public class AccountLedgerController {
     private final AccountBookService accountBookService;
 
-    public AccountBookController(AccountBookService accountBookService) {
+    public AccountLedgerController(AccountBookService accountBookService) {
         this.accountBookService = accountBookService;
     }
 
@@ -33,20 +33,20 @@ public class AccountBookController {
      */
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    AccountBookResultData add(@RequestBody @Valid AccountBookItemRegistrationData registrationData) {
-        AccountBook accountBook = accountBookService.addAccountBookItem(registrationData);
-        return getAccountBookResultData(accountBook);
+    AccountLedgerResultData add(@RequestBody @Valid AccountLedgerItemRegistrationData registrationData) {
+        AccountLedger accountLedger = accountBookService.addAccountBookItem(registrationData);
+        return getAccountBookResultData(accountLedger);
     }
 
-    private AccountBookResultData getAccountBookResultData(AccountBook accountBook) {
-        if (accountBook == null) {
+    private AccountLedgerResultData getAccountBookResultData(AccountLedger accountLedger) {
+        if (accountLedger == null) {
             return null;
         }
 
-        return AccountBookResultData.builder()
-                .id(accountBook.getId())
-                .amount(accountBook.getAmount())
-                .description(accountBook.getDescription())
+        return AccountLedgerResultData.builder()
+                .id(accountLedger.getId())
+                .amount(accountLedger.getAmount())
+                .description(accountLedger.getDescription())
                 .build();
     }
 }
