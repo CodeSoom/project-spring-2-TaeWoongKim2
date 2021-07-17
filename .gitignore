@@ -1,3 +1,6 @@
+## Mac OS x
+.DS_*
+
 # Ignore Gradle project-specific cache directory
 .gradle
 
@@ -6,3 +9,9 @@ build
 
 # IDE
 .idea
+
+## VS Code
+.vscode
+
+## Node.js
+node_modules
