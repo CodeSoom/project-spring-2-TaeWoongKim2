@@ -1,9 +1,9 @@
 package com.codesoom.project.web.controller;
 
 import com.codesoom.project.core.application.AccountBookService;
-import com.codesoom.project.core.domain.AccountBook;
+import com.codesoom.project.core.domain.AccountLedger;
 import com.codesoom.project.helper.UTF8EncodingFilter;
-import com.codesoom.project.web.dto.account.AccountBookItemRegistrationData;
+import com.codesoom.project.web.dto.account.AccountLedgerItemRegistrationData;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -22,11 +22,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(AccountBookController.class)
+@WebMvcTest(AccountLedgerController.class)
 @AutoConfigureRestDocs
 @UTF8EncodingFilter
 @DisplayName("AccountBookController 테스트")
-class AccountBookControllerTest {
+class AccountLedgerControllerTest {
     private static final Long ID = 1L;
     private static final Integer AMOUNT = 3000000;
     private static final String DESCRIPTION = "월급";
@@ -43,12 +43,12 @@ class AccountBookControllerTest {
     @BeforeEach
     void setUp() {
         given(accountBookService.addAccountBookItem(
-                any(AccountBookItemRegistrationData.class))
+                any(AccountLedgerItemRegistrationData.class))
         )
                 .will(invocation -> {
-                    AccountBookItemRegistrationData registrationData
+                    AccountLedgerItemRegistrationData registrationData
                             = invocation.getArgument(0);
-                    return AccountBook.builder()
+                    return AccountLedger.builder()
                             .id(ID)
                             .amount(registrationData.getAmount())
                             .description(registrationData.getDescription())
