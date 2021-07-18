@@ -1,9 +1,12 @@
 import React from 'react';
 
+import AccountContainer from '../containers/AccountContainer';
+
 export default function AccountSlider() {
   return (
-    <>
-      계좌 슬라이더
-    </>
+    <div>
+      <h2>계좌 만들기</h2>
+      <AccountContainer />
+    </div>
   );
 }
