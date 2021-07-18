@@ -1,36 +1,32 @@
 import React from 'react';
 
-import Input from '../presentational/Input';
+import { useDispatch, useSelector } from 'react-redux';
+
+import AccountForm from '../presentational/AccountForm';
+
+import {
+  updateUserForm,
+  createAccount,
+} from '../../redux/slice';
 
 export default function AccountContainer() {
+  const { userForm } = useSelector((state) => state);
+
+  const dispatch = useDispatch();
+
   const handleChange = (value) => {
-    const todo = '';
-    return value + todo;
+    dispatch(updateUserForm(value));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
+    dispatch(createAccount());
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <Input
-          id="name"
-          label="이름"
-          placeholder="이름을 입력해주세요"
-          value="name"
-          onChange={handleChange}
-        />
-        <Input
-          id="email"
-          label="이메일"
-          placeholder="이메일을 입력해주세요"
-          value="email"
-          onChange={handleChange}
-        />
-        <button type="submit">저장</button>
-      </form>
-    </>
+    <AccountForm
+      account={userForm}
+      onChange={handleChange}
+      onSubmit={handleSubmit}
+    />
   );
 }

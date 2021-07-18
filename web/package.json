@@ -22,7 +22,7 @@
     "@codeceptjs/examples": "^1.2.1",
     "@codeceptjs/ui": "^0.4.6",
     "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
+    "@testing-library/react": "^11.2.7",
     "@types/jest": "^26.0.20",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
@@ -48,7 +48,8 @@
     "@reduxjs/toolkit": "^1.5.0",
     "axios": "^0.21.1",
     "css-loader": "^6.1.0",
-    "faker": "^5.5.3",
+    "style-loader": "^3.1.0",
+    "svg-url-loader": "^7.1.1",
     "file-loader": "^6.2.0",
     "fullpage-react": "^3.1.0",
     "lodash": "^4.17.21",
@@ -56,8 +57,6 @@
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
-    "style-loader": "^3.1.0",
-    "svg-url-loader": "^7.1.1",
     "sweetalert2": "^10.14.1"
   }
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 
 export default function Input({
-  id,
-  label,
   type = 'text',
-  placeholder,
+  label,
+  id,
   value,
+  placeholder,
   onChange,
 }) {
   const handleChange = ({ target }) => {
@@ -19,11 +19,11 @@ export default function Input({
     <div>
       <label htmlFor={id}>{label}</label>
       <input
+        type={type}
         id={id}
         value={value}
-        onChange={handleChange}
-        type={type}
         placeholder={placeholder}
+        onChange={handleChange}
       />
     </div>
   );

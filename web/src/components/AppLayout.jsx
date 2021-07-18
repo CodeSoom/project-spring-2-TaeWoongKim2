@@ -2,32 +2,20 @@ import React from 'react';
 
 import { Fullpage, Slide } from 'fullpage-react';
 
-import AccountSlider from './sliders/AccountSlider';
+import AccountContainer from './containers/AccountContainer';
 
 const slides = [
-  <Slide><AccountSlider /></Slide>,
-  <Slide> Slide 2 </Slide>,
-  <Slide> Slide 3 </Slide>,
+  <Slide><AccountContainer /></Slide>,
+  <Slide>Slide 2</Slide>,
+  <Slide>Slide 3</Slide>,
 ];
 
-const fullPageOptions = {
-  scrollSensitivity: 7,
-  touchSensitivity: 7,
-  scrollSpeed: 400,
-};
-
-export default function SlidersLayout() {
-  const {
-    scrollSensitivity,
-    touchSensitivity,
-    scrollSpeed,
-  } = fullPageOptions;
-
+export default function AppLayout() {
   return (
     <Fullpage
-      scrollSensitivity={scrollSensitivity}
-      touchSensitivity={touchSensitivity}
-      scrollSpeed={scrollSpeed}
+      scrollSensitivity={7}
+      touchSensitivity={7}
+      scrollSpeed={300}
       slides={slides}
       hideScrollBars
       enableArrowKeys
