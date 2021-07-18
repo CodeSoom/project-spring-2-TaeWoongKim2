@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.VerticalSlide:nth-child(1) {
+  background-color: #ddffdd;
+}
+.VerticalSlide:nth-child(2) {
+  background-color: #acffee;
+}
+.VerticalSlide:nth-child(3) {
+  background-color: #ffd6ff;
+}
