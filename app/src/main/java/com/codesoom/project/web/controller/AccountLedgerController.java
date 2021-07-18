@@ -17,7 +17,7 @@ import javax.validation.Valid;
  * 계좌내역에 관련 요청을 처리하고 그에 따른 응답을 담당합니다.
  */
 @RestController
-@RequestMapping("/accountBooks")
+@RequestMapping("/ledgers")
 public class AccountLedgerController {
     private final AccountBookService accountBookService;
 
